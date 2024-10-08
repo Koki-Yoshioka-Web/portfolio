@@ -14,9 +14,10 @@
         align-items: center; /* 垂直方向の中央揃え */
         justify-content: center; /* 水平方向の中央揃え */
         height: 100vh; /* ビューポート全体の高さ */
+        padding: 20px; /* スペースを追加 */
+        box-sizing: border-box;
         animation: pageTurn 1.5s ease;
       }
-
       @keyframes pageTurn {
         0% {
           transform: rotateY(-90deg);
@@ -27,46 +28,52 @@
           opacity: 1;
         }
       }
+
       h1 {
         margin-bottom: 20px;
         text-align: center; /* タイトルを中央揃え */
+        font-size: 2rem; /* フォントサイズを大きく */
       }
 
       form {
-        background-color: #000000; /* ダークグレーの背景 */
+        background-color: #1a1a1a; /* ダークグレーの背景 */
         border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgb(0, 0, 0);
+        padding: 30px; /* 内側のパディングを増加 */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* より深い影 */
         width: 100%; /* 幅を100%に設定 */
-        max-width: 400px; /* 最大幅 */
-        padding-right: 200px;
+        max-width: 300px; /* 最大幅 */
+        padding-right: 50px;
       }
 
       label {
         display: block;
         margin-bottom: 10px;
-        font-size: 1rem;
+        font-size: 1.1rem; /* ラベルのフォントサイズ */
         color: #ffffff; /* ラベルの色を白に設定 */
       }
 
       input,
       textarea {
         width: 100%; /* 幅を100%に設定 */
-        padding: 10px;
+        padding: 12px; /* パディングを調整 */
         margin-bottom: 20px; /* 下のマージン */
         border: none; /* ボーダーなし */
         border-radius: 5px; /* 角を丸く */
+        font-size: 1rem; /* フォントサイズを調整 */
       }
 
       input[type="submit"] {
-        background-color: #ffffff; /* 白いボタン */
-        color: #000; /* 黒いテキスト */
+        background-color: #454545; /* ボタンの色 */
+        color: #fff; /* 白いテキスト */
         cursor: pointer; /* ポインターカーソル */
-        transition: background-color 0.3s;
+        transition: background-color 0.3s, transform 0.2s; /* アニメーション */
+        padding: 12px; /* ボタンのパディング */
+        font-size: 1.1rem; /* ボタンのフォントサイズを調整 */
       }
 
       input[type="submit"]:hover {
-        background-color: #343434; /* ホバー時の色 */
+        background-color: #1e1e1e; /* ホバー時の色 */
+        transform: scale(1.05); /* ホバー時に少し拡大 */
       }
 
       .back-to-top {
@@ -92,7 +99,7 @@
     <div>
       <h1>Contact Me</h1>
       <form
-        action="mailto:your-email@example.com"
+        action="mailto:kouki121912191219@gmail.com"
         method="post"
         enctype="text/plain"
       >
