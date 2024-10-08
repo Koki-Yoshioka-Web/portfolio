@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #000; /* Black background */
+        color: white; /* White text */
+        overflow: hidden;
+        animation: pageTurn 1.5s ease; /* Page turn animation */
+      }
+
+      @keyframes pageTurn {
+        0% {
+          transform: rotateY(-90deg);
+          opacity: 0;
+        }
+        100% {
+          transform: rotateY(0);
+          opacity: 1;
+        }
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        height: 100vh; /* Full viewport height */
+        position: relative; /* For absolute positioning of steam */
+      }
+
+      .text-section {
+        flex: 1; /* Take remaining space */
+        padding: 20px; /* Inner padding */
+        position: relative; /* Position for absolute children */
+      }
+
+      h1 {
+        font-size: 2.5rem; /* Adjust as needed */
+        margin: 0 0 20px 0; /* Spacing */
+        position: relative; /* For steam effect positioning */
+        overflow: hidden; /* Hide overflow */
+      }
+
+      .steam {
+        position: absolute;
+        top: -20px; /* Position above the text */
+        left: 50%; /* Center the steam */
+        transform: translateX(-50%); /* Adjust for centering */
+        height: 20px; /* Height of the steam */
+        width: 100%; /* Full width */
+        pointer-events: none; /* Allow clicks to pass through */
+        opacity: 0; /* Start invisible */
+        animation: steam-animation 2s infinite; /* Animate the steam */
+      }
+
+      @keyframes steam-animation {
+        0% {
+          transform: translate(-50%, 0) scale(1);
+          opacity: 1; /* Start fully visible */
+        }
+        100% {
+          transform: translate(-50%, -100%) scale(1.5); /* Move upwards and scale */
+          opacity: 0; /* Fade out */
+        }
+      }
+
+      p {
+        font-size: 1.2rem; /* Adjust as needed */
+        line-height: 1.6; /* Line height for readability */
+      }
+
+      /* Back to Top button styling */
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        z-index: 1; /* Ensure button is above other content */
+      }
+
+      .back-to-top:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-section">
+        <h1>
+          KOKI YOSHIOKA
+          <span class="steam"></span>
+        </h1>
+        <p>
+          初めまして。私はただの大学生です。文学部英米学科に所属しており、言語学を専攻しています。では、なぜこういったポートフォリオサイトが存在するのか。それは、私が一流のエンジニアを夢見ている青年であるからです。独学で日々学習しております。成長意欲とやる気と根性でここまで来ました。まだまだ立ち止まることはできません。私の更なる挑戦と成長を目に焼き付けてください。
+        </p>
+        <p>
+          Nice to meet you. I am just a college student. I belong to the
+          Department of English and American Studies in the Faculty of Letters,
+          majoring in Linguistics. So, why do these portfolio sites exist? It is
+          because I am a young man who dreams of becoming a top-notch engineer.
+          I am self-taught and learning every day. I have come this far with a
+          desire to grow, motivation, and perseverance. I am not standing still
+          yet. Please witness my further challenge and growth.
+        </p>
+      </div>
+    </div>
+    <!-- ボタンを変更して index.html に戻る -->
+    <button class="back-to-top" onclick="goToIndex()">ホームに戻る</button>
+
+    <script>
+      function goToIndex() {
+        window.location.href = "index.html"; // index.html に遷移
+      }
+    </script>
+  </body>
+</html>
