@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KOKI YOSHIOKA Portfolio</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: #000;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+      }
+      /* 左上に固定されるヘッダー */
+      #header {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        color: white;
+        font-family: "Arial", sans-serif;
+        z-index: 1000; /* ヘッダーがキャンバスの上に表示されるように */
+      }
+      #header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      #nav {
+        margin-top: 10px;
+      }
+      #nav a {
+        display: block;
+        margin-top: 5px;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+      #nav a:hover {
+        text-decoration: underline;
+      }
+
+      /* 右上に固定されるボタン */
+      #backToOpening {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color: #000000;
+        border: none;
+        font-size: 10px;
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+        z-index: 1000; /* ボタンがキャンバスの上に表示されるように */
+      }
+      #backToOpening:hover {
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 左上のヘッダーとナビゲーションメニュー -->
+    <div id="header">
+      <h1>KOKI YOSHIOKA</h1>
+      <div id="nav">
+        <a href="work.html">WORK</a>
+        <a href="skill.html">SKILL</a>
+        <a href="about.html">ABOUT</a>
+      </div>
+    </div>
+
+    <!-- 右上に戻るボタン -->
+    <button id="backToOpening" onclick="goToOpening()">
+      オープニングに戻る
+    </button>
+
+    <canvas id="bg"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+      // オープニングに戻る関数
+      function goToOpening() {
+        window.location.href = "top.html"; // top.html に遷移
+      }
+    </script>
+  </body>
+</html>
