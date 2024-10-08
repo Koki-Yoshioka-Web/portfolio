@@ -8,9 +8,9 @@
       body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background-color: #000; /* Black background */
-        color: white; /* White text */
-        animation: pageTurn 1.5s ease; /* Page turn animation */
+        background-color: #000;
+        color: white;
+        animation: pageTurn 1.5s ease;
       }
 
       @keyframes pageTurn {
@@ -27,54 +27,53 @@
       .container {
         display: flex;
         justify-content: center;
-        align-items: flex-start; /* Align to the top */
+        align-items: flex-start;
         padding: 20px;
-        min-height: calc(100vh - 40px); /* Adjust to allow space for button */
-        position: relative; /* For absolute positioning of steam */
+        min-height: calc(100vh - 40px);
+        position: relative;
       }
 
       .text-section {
-        flex: 1; /* Take remaining space */
-        padding: 20px; /* Inner padding */
-        position: relative; /* Position for absolute children */
+        flex: 1;
+        padding: 20px;
+        position: relative;
       }
 
       h1 {
-        font-size: 2.5rem; /* Adjust as needed */
-        margin: 0 0 20px 0; /* Spacing */
-        position: relative; /* For steam effect positioning */
-        overflow: hidden; /* Hide overflow */
+        font-size: 2.5rem;
+        margin: 0 0 20px 0;
+        position: relative;
+        overflow: hidden;
       }
 
       .steam {
         position: absolute;
-        top: -20px; /* Position above the text */
-        left: 50%; /* Center the steam */
-        transform: translateX(-50%); /* Adjust for centering */
-        height: 20px; /* Height of the steam */
-        width: 100%; /* Full width */
-        pointer-events: none; /* Allow clicks to pass through */
-        opacity: 0; /* Start invisible */
-        animation: steam-animation 2s infinite; /* Animate the steam */
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 20px;
+        width: 100%;
+        pointer-events: none;
+        opacity: 0;
+        animation: steam-animation 2s infinite;
       }
 
       @keyframes steam-animation {
         0% {
           transform: translate(-50%, 0) scale(1);
-          opacity: 1; /* Start fully visible */
+          opacity: 1;
         }
         100% {
-          transform: translate(-50%, -100%) scale(1.5); /* Move upwards and scale */
-          opacity: 0; /* Fade out */
+          transform: translate(-50%, -100%) scale(1.5);
+          opacity: 0;
         }
       }
 
       p {
-        font-size: 1.2rem; /* Adjust as needed */
-        line-height: 1.6; /* Line height for readability */
+        font-size: 1.2rem;
+        line-height: 1.6;
       }
 
-      /* Back to Top button styling */
       .back-to-top {
         position: fixed;
         bottom: 20px;
@@ -86,7 +85,7 @@
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s;
-        z-index: 1; /* Ensure button is above other content */
+        z-index: 1;
       }
 
       .back-to-top:hover {
@@ -115,12 +114,12 @@
         </p>
       </div>
     </div>
-    <!-- ボタンを変更して index.html に戻る -->
+
     <button class="back-to-top" onclick="goToIndex()">ホームに戻る</button>
 
     <script>
       function goToIndex() {
-        window.location.href = "index.html"; // index.html に遷移
+        window.location.href = "index.html";
       }
     </script>
   </body>

@@ -8,10 +8,10 @@
       body {
         margin: 0;
         font-family: Arial, sans-serif;
-        background-color: #000; /* Black background */
-        color: white; /* White text */
+        background-color: #000;
+        color: white;
 
-        animation: pageTurn 1.5s ease; /* Page turn animation */
+        animation: pageTurn 1.5s ease;
       }
 
       @keyframes pageTurn {
@@ -41,22 +41,22 @@
       }
 
       .work-card {
-        background-color: #1a1a1a; /* カードの背景色をダークグレーに設定 */
+        background-color: #1a1a1a;
         border: 1px solid #e0e0e0;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden; /* Overflowを隠す */
-        transition: transform 0.2s; /* カードのホバー効果 */
+        overflow: hidden;
+        transition: transform 0.2s;
       }
 
       .work-card:hover {
-        transform: scale(1.05); /* ホバー時に拡大 */
+        transform: scale(1.05);
       }
 
       .work-card img {
-        width: 100%; /* 幅を100%に設定 */
-        height: auto; /* アスペクト比を維持 */
-        cursor: pointer; /* ポインターカーソル */
+        width: 100%;
+        height: auto;
+        cursor: pointer;
       }
 
       .work-card h3 {
@@ -66,13 +66,13 @@
 
       .work-card p {
         margin: 10px;
-        color: #ccc; /* 灰色のテキスト */
+        color: #ccc;
         font-size: 0.9rem;
       }
 
       a {
-        text-decoration: none; /* 下線なし */
-        color: inherit; /* テキストの色を親から継承 */
+        text-decoration: none;
+        color: inherit;
       }
 
       .back-to-top {
@@ -86,7 +86,7 @@
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s;
-        z-index: 1; /* Ensure button is above other content */
+        z-index: 1;
       }
 
       .back-to-top:hover {
@@ -95,7 +95,7 @@
     </style>
     <script>
       function goToIndex() {
-        window.location.href = "index.html"; // index.htmlに遷移
+        window.location.href = "index.html";
       }
     </script>
   </head>
@@ -103,7 +103,6 @@
     <h1>Works</h1>
 
     <div class="works-container">
-      <!-- 作品1: syukastu management -->
       <div class="work-card">
         <a
           href="https://koki-yoshioka-web.github.io/syukastu-management/"
@@ -120,7 +119,6 @@
         </a>
       </div>
 
-      <!-- 作品2: yochi -->
       <div class="work-card">
         <a href="https://yochi.online/" target="_blank">
           <img src="スクリーンショット 2024-10-08 23.41.02.png" alt="yochi" />
@@ -131,7 +129,6 @@
         </a>
       </div>
 
-      <!-- 作品3: practice2 -->
       <div class="work-card">
         <a
           href="https://koki-yoshioka-web.github.io/practice2/"
